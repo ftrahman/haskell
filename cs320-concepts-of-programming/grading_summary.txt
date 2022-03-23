@@ -1,0 +1,17 @@
+
+Repo name: ftrahman
+
+BUID: U67393642
+
+Average: 94.61%
+
+Week 2: 100.00%
+Week 3: 81.82%
+Week 4 (rerun): 69.64%
+Week 5: 100.00%
+Week 6: 100.00%
+Week 7 (rerun): 100.00%
+Week 8: 100.00%
+Week 9: 100.00%
+Week 10: 100.00%
+

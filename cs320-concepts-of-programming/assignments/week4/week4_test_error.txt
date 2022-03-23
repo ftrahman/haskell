@@ -1,0 +1,159 @@
+ERR:
+week4-0.1.0.0: unregistering (switching from /home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-fhorn97/assignments/week4/ to /home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/)
+week4-0.1.0.0: configure (lib + test)
+Configuring week4-0.1.0.0...
+week4-0.1.0.0: build (lib + test)
+Preprocessing library for week4-0.1.0.0..
+Building library for week4-0.1.0.0..
+[1 of 8] Compiling Lang0            ( src/Lang0.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang0.o )
+[2 of 8] Compiling Lang1            ( src/Lang1.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang1.o )
+[3 of 8] Compiling Lang2            ( src/Lang2.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang2.o )
+[4 of 8] Compiling Lang3            ( src/Lang3.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang3.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang3.hs:31:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature: m0 :: Map k a
+   |
+31 | m0 = Map.empty
+   | ^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang3.hs:36:21: warning: [-Wname-shadowing]
+    This binding for ‘s’ shadows the existing binding
+      bound at src/Lang3.hs:34:14
+   |
+36 |                 (Id s) -> (Nothing, m)
+   |                     ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang3.hs:36:21: warning: [-Wunused-matches]
+    Defined but not used: ‘s’
+   |
+36 |                 (Id s) -> (Nothing, m)
+   |                     ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang3.hs:38:25: warning: [-Wname-shadowing]
+    This binding for ‘s’ shadows the existing binding
+      bound at src/Lang3.hs:34:14
+   |
+38 |                 (Assign s ast) -> (eval (Assign s ast) m)
+   |                         ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang3.hs:38:27: warning: [-Wname-shadowing]
+    This binding for ‘ast’ shadows the existing binding
+      bound at src/Lang3.hs:34:16
+   |
+38 |                 (Assign s ast) -> (eval (Assign s ast) m)
+   |                           ^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang3.hs:43:26: warning: [-Wunused-matches]
+    Defined but not used: ‘x’
+   |
+43 |   case (eval ast1 m) of (x, m1) -> case (eval ast2 m) of (y, m2) -> (y, Map.union (Map.union m1 m2) m)
+   |                          ^
+[5 of 8] Compiling Lang4            ( src/Lang4.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang4.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang4.hs:21:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature: e0 :: Map k a
+   |
+21 | e0 = Map.empty
+   | ^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang4.hs:22:21: warning: [-Wunused-matches]
+    Defined but not used: ‘e’
+   |
+22 | eval (LiteralInt x) e = Just x
+   |                     ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang4.hs:30:22: warning: [-Wname-shadowing]
+    This binding for ‘s’ shadows the existing binding
+      bound at src/Lang4.hs:28:11
+   |
+30 |                  (Id s) -> case (eval ast1 e) of (y) -> y
+   |                      ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang4.hs:30:22: warning: [-Wunused-matches]
+    Defined but not used: ‘s’
+   |
+30 |                  (Id s) -> case (eval ast1 e) of (y) -> y
+   |                      ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang4.hs:31:101: warning: [-Wname-shadowing]
+    This binding for ‘y’ shadows the existing binding
+      bound at src/Lang4.hs:31:51
+   |
+31 |                  (Plus (LiteralInt x) (LiteralInt y)) -> case (eval ast2 (Map.insert s (x+y) e)) of y -> (y)
+   |                                                                                                     ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang4.hs:34:52: warning: [-Wname-shadowing]
+    This binding for ‘x’ shadows the existing binding
+      bound at src/Lang4.hs:33:24
+   |
+34 |                                                   (x) -> case (eval y e) of (Nothing) -> Nothing
+   |                                                    ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang4.hs:35:78: warning: [-Wname-shadowing]
+    This binding for ‘y’ shadows the existing binding
+      bound at src/Lang4.hs:33:26
+   |
+35 |                                                                             (y) -> case (eval ast2 (Map.insert s ((maybeToInt x) + (maybeToInt y)) e)) of z -> z
+   |                                                                              ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Lang4.hs:46:1: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘maybeToInt’: Patterns not matched: Nothing
+   |
+46 | maybeToInt (Just x) = x
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+[6 of 8] Compiling Map              ( src/Map.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Map.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Map.hs:56:33: error:
+    Ambiguous occurrence ‘otherwise’
+    It could refer to either ‘Prelude.otherwise’,
+                             imported from ‘Prelude’ at src/Map.hs:5:1-44
+                             (and originally defined in ‘GHC.Base’)
+                          or ‘Map.otherwise’, defined at src/Map.hs:12:1
+   |
+56 |                               | otherwise = False
+   |                                 ^^^^^^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Map.hs:66:33: error:
+    Ambiguous occurrence ‘otherwise’
+    It could refer to either ‘Prelude.otherwise’,
+                             imported from ‘Prelude’ at src/Map.hs:5:1-44
+                             (and originally defined in ‘GHC.Base’)
+                          or ‘Map.otherwise’, defined at src/Map.hs:12:1
+   |
+66 |                               | otherwise = Nothing
+   |                                 ^^^^^^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Map.hs:92:16: error:
+    Ambiguous occurrence ‘otherwise’
+    It could refer to either ‘Prelude.otherwise’,
+                             imported from ‘Prelude’ at src/Map.hs:5:1-44
+                             (and originally defined in ‘GHC.Base’)
+                          or ‘Map.otherwise’, defined at src/Map.hs:12:1
+   |
+92 |              | otherwise = (insert k (removeMaybe (f (removeMaybe (lookup k m)))) m)
+   |                ^^^^^^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Map.hs:112:33: error:
+    Ambiguous occurrence ‘otherwise’
+    It could refer to either ‘Prelude.otherwise’,
+                             imported from ‘Prelude’ at src/Map.hs:5:1-44
+                             (and originally defined in ‘GHC.Base’)
+                          or ‘Map.otherwise’, defined at src/Map.hs:12:1
+    |
+112 |                               | otherwise = Null
+    |                                 ^^^^^^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-ftrahman/assignments/week4/src/Map.hs:114:27: error:
+    Ambiguous occurrence ‘otherwise’
+    It could refer to either ‘Prelude.otherwise’,
+                             imported from ‘Prelude’ at src/Map.hs:5:1-44
+                             (and originally defined in ‘GHC.Base’)
+                          or ‘Map.otherwise’, defined at src/Map.hs:12:1
+    |
+114 |                         | otherwise = (delete k (Node (filter f x) k v (filter f y)))
+    |                           ^^^^^^^^^
+
+--  While building package week4-0.1.0.0 using:
+      /home/zui/.stack/setup-exe-cache/x86_64-linux/Cabal-simple_mPHDZzAJ_2.4.0.1_ghc-8.6.4 --builddir=.stack-work/dist/x86_64-linux/Cabal-2.4.0.1 build lib:week4 test:test --ghc-options " -ddump-hi -ddump-to-file"
+    Process exited with code: ExitFailure 1
